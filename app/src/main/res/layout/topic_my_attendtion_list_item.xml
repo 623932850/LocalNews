@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="70dp">
+    
+    <ImageView
+        android:id="@+id/iv_topic_imageIcon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/topic_image_icon"/>
+
+    <TextView
+        android:id="@+id/tv_topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14dp"
+        android:textColor="#48566C"
+        android:layout_toRightOf="@id/iv_topic_imageIcon"/>
+
+    <TextView
+        android:id="@+id/tv_topicDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#A7B1BF"
+        android:layout_below="@id/tv_topicName"
+        android:layout_marginTop="1dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_alignLeft="@id/tv_topicName"/>
+
+</RelativeLayout>

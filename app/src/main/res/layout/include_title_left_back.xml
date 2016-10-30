@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/news_tab_bg_color">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/back_click_selector"
+        android:onClick="onBackClick">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@mipmap/ic_left_arrow" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="选择城市"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+</RelativeLayout>

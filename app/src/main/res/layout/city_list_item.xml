@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/listitem_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|left"
+        android:textColor="#47556B"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@mipmap/ic_right_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:layout_marginRight="16dp"/>
+
+</RelativeLayout>

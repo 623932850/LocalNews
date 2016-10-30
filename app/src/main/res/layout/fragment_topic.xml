@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/news_tab_bg_color">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="152dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioBtn_hot_topic"
+                style="@style/topic_title_radio_btn_left"
+                android:text="热名话题" />
+
+            <RadioButton
+                android:id="@+id/radioBtn_attendtion_topic"
+                style="@style/topic_title_radio_btn_right"
+                android:text="我的关注" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:onClick="onClickAllTopic"
+            android:src="@mipmap/ic_plus_white" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/topic_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

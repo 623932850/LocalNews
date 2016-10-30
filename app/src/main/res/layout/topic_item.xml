@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="96dp"
+    android:paddingRight="17dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_topic_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_topic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_topic_icon"
+            android:textColor="#46556B"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_attendtion"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#EE4B4E"
+            android:background="@drawable/btn_red_rectangle"
+            android:text="关注"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_topic_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:textColor="#9BA7B8"
+        android:textSize="12dp" />
+
+</LinearLayout>

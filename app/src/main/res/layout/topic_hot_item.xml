@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_head_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/head_image" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/iv_head_icon"
+            android:text="匿名用户"
+            android:textColor="#81BDE0"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_head_icon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_head_icon"
+            android:text="10分钟前"
+            android:textColor="#CCD2DB"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="14.5dp" />
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="14.5dp" />
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="14.5dp" />
+
+        <ImageView
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="14.5dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="DAY1：小伙伴们进入新疆之后，首站抵达DAY1：小伙伴们进入新疆之后，首站抵达DAY1：小伙伴们进入新疆之后，首站抵达DAY1：小伙伴们进入新疆之后，首站抵达
+"
+        android:textColor="#415067"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="#96A3B4"
+            android:text="111"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="#96A3B4"
+            android:text="449"/>
+
+    </LinearLayout>
+</LinearLayout>

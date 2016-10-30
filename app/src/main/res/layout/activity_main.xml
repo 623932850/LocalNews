@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ACACAC"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickNews">
+
+            <TextView
+                android:id="@+id/tv_news_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新闻"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/main_tabs_text_color"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/btn_home"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickTopic">
+
+            <TextView
+                android:id="@+id/tv_topic_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="话题"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/main_tabs_text_color"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/btn_topic"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickMy">
+
+            <TextView
+                android:id="@+id/tv_user_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/main_tabs_text_color"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/btn_my"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

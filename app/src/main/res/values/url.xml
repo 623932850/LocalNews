@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="LOGIN">/v1/mobile/login</string>
+    <string name="NEWS_TAGS">/v1/news_tags</string>
+    <string name="MY_NEWS_TAGS">/v1/mobile/me/news_tags</string>
+    <string name="ADD_NEWS_TAGS">/v1/mobile/me/news_tags/%1$d</string>
+
+</resources>

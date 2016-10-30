@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="news_tab_bg_color">#F15252</color>
+    <color name="back_press_color">#88F15252</color>
+    <color name="divider_line_color">#EAEAEA</color>
+    <color name="activity_bg">#F7F7F7</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="news_tabs_text_color_normal">#8997aa</color>
+    <color name="news_tabs_text_color_press">#f06769</color>
+    <color name="main_tab_text_color_normal">#8493A8</color>
+    <color name="main_tab_text_color_press">#F27476</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="light_blue">#6593cb</color>
+
+</resources>
