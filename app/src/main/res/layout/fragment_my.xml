@@ -14,16 +14,15 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:textSize="18dp"
+            android:text="我"
             android:textColor="@android:color/white"
-            android:text="我" />
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/white">
 
         <View
@@ -57,7 +56,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:layout_alignParentBottom="true"
             android:background="@color/divider_line_color" />
 
@@ -75,10 +74,30 @@
             android:layout_height="0.5dp"
             android:background="@color/divider_line_color" />
 
+        <RelativeLayout
+            android:id="@+id/rl_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/listitem_selector"
+            android:clickable="true"
+            android:focusable="true">
 
-        <TextView
-            style="@style/my_listitem_style"
-            android:text="反馈支持" />
+            <TextView
+                style="@style/my_listitem_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:clickable="false"
+                android:text="反馈支持" />
+
+            <ImageView
+                style="@style/public_right_arrow_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+
 
         <View
             android:layout_width="match_parent"
@@ -87,10 +106,29 @@
             android:background="@color/divider_line_color" />
 
 
-        <TextView
-            style="@style/my_listitem_style"
-            android:text="关于" />
+        <RelativeLayout
+            android:id="@+id/rl_about"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/listitem_selector"
+            android:clickable="true"
+            android:focusable="true">
 
+            <TextView
+                style="@style/my_listitem_style"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:clickable="false"
+                android:text="关于" />
+
+            <ImageView
+                style="@style/public_right_arrow_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"

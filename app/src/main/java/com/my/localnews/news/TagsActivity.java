@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.my.localnews.ArrayRequestCallback;
@@ -29,11 +30,12 @@ public class TagsActivity extends BaseActivity {
 
     private DragGridView mMyTagsGridView;
     private DragGridView mRecommendGridView;
-    private MyTagsAdapter mMyTagsAdapter;
-    private MyTagsAdapter mRecommendAdapter;
+    private TagsAdapter mMyTagsAdapter;
+    private TagsAdapter mRecommendAdapter;
     private List<NewsTags> mMyTagsList;
     private List<NewsTags> mRecommendTagsList;
     private LayoutInflater mLayoutInflater;
+    private TextView mTvEditToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,13 +44,14 @@ public class TagsActivity extends BaseActivity {
         mLayoutInflater = LayoutInflater.from(this);
         mMyTagsGridView = (DragGridView) findViewById(R.id.gridview_mytags);
         mRecommendGridView = (DragGridView) findViewById(R.id.gridview_recommend_tags);
+        mTvEditToggle = (TextView) findViewById(R.id.tv_edit_toggle);
         mMyTagsList = new ArrayList<NewsTags>();
 
-        mMyTagsAdapter = new MyTagsAdapter(mMyTagsList);
+        mMyTagsAdapter = new TagsAdapter(mMyTagsList);
         mMyTagsGridView.setAdapter(mMyTagsAdapter);
 
         mRecommendTagsList = new ArrayList<NewsTags>();
-        mRecommendAdapter = new MyTagsAdapter(mRecommendTagsList);
+        mRecommendAdapter = new TagsAdapter(mRecommendTagsList);
         mRecommendGridView.setAdapter(mRecommendAdapter);
 
         mRecommendGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,6 +70,15 @@ public class TagsActivity extends BaseActivity {
         RequestManager.getInstance().request(RequestManager.REQCODE_MY_NEWS_TAGS);
 
 
+    }
+
+    public void onClickClose(View view){
+        finish();
+    }
+
+    public void onClickEdit(View view){
+        mMyTagsAdapter.enableEdit(!mMyTagsAdapter.enableEdit);
+        mTvEditToggle.setText(mMyTagsAdapter.enableEdit ? R.string.finish : R.string.edit);
     }
 
     @Override
@@ -102,13 +114,15 @@ public class TagsActivity extends BaseActivity {
 
     public static class ViewHolder {
         TextView mTvTagsName;
+        ImageView mIvDelete;
     }
 
-    public class MyTagsAdapter extends BaseAdapter {
+    public class TagsAdapter extends BaseAdapter {
 
         private List<NewsTags> mTagsStrs;
+        private boolean enableEdit = false;
 
-        public MyTagsAdapter(List<NewsTags> tags) {
+        public TagsAdapter(List<NewsTags> tags) {
             mTagsStrs = tags;
         }
 
@@ -127,6 +141,11 @@ public class TagsActivity extends BaseActivity {
             return position;
         }
 
+        public void enableEdit(boolean enable){
+            enableEdit = enable;
+            notifyDataSetChanged();
+        }
+
         @Override
         public View getView(int position, View convertView, ViewGroup viewGroup) {
             ViewHolder viewHolder = null;
@@ -134,11 +153,17 @@ public class TagsActivity extends BaseActivity {
                 convertView = mLayoutInflater.inflate(R.layout.tags_item, null);
                 viewHolder = new ViewHolder();
                 viewHolder.mTvTagsName = (TextView) convertView.findViewById(R.id.tv_tags_name);
+                viewHolder.mIvDelete = (ImageView) convertView.findViewById(R.id.iv_delete);
                 convertView.setTag(viewHolder);
             }
             viewHolder = (ViewHolder) convertView.getTag();
             viewHolder.mTvTagsName.setText(mTagsStrs.get(position).name);
             viewHolder.mTvTagsName.setGravity(Gravity.CENTER);
+            if(enableEdit){
+                viewHolder.mIvDelete.setVisibility(View.VISIBLE);
+            }else{
+                viewHolder.mIvDelete.setVisibility(View.GONE);
+            }
             return convertView;
         }
     }

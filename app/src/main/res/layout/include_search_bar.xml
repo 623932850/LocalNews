@@ -20,6 +20,6 @@
         android:textSize="13dp"
         android:textColor="#8997AA"
         android:layout_gravity="center_vertical|left"
-        android:text="搜索感兴趣的标签"/>
+        android:text="搜索你感兴趣的标签"/>
 
 </LinearLayout>

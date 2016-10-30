@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_white_rectange">
+    android:layout_height="match_parent">
 
 
     <TextView
         android:id="@+id/tv_tags_name"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:textSize="14dp"
-        android:textColor="#8896AA"/>
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:background="@drawable/bg_white_rectange"
+        android:gravity="center"
+        android:textColor="#8896AA"
+        android:textSize="14dp" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_news_tags_delete" />
+
+</RelativeLayout>

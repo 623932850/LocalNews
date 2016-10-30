@@ -101,12 +101,12 @@ public class MainActivity extends BaseActivity {
     }
 
     public void onClickMy(View view){
-//        switchUserFragment();
-//        mTvNewsTab.setSelected(false);
-//        mTvTopicTab.setSelected(false);
-//        mTvUserTab.setSelected(true);
+        switchUserFragment();
+        mTvNewsTab.setSelected(false);
+        mTvTopicTab.setSelected(false);
+        mTvUserTab.setSelected(true);
 
-        LocalNewsApplication.getInstance().shareToFriendCircle();
+//        LocalNewsApplication.getInstance().shareToFriendCircle();
     }
 
     public void onClickAllTopic(View view){

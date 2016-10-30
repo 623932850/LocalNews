@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <drawable name="listitem_press_color">#88FFFFFF</drawable>
+    <drawable name="listitem_press_color">#EEEEEE</drawable>
     <drawable name="news_tab_bg_color">#F15252</drawable>
     <drawable name="back_press_color">#FF0000</drawable>
     <drawable name="activity_bg">#F7F7F7</drawable>
